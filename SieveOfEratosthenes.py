@@ -1,4 +1,5 @@
 def SieveOfEratosthenes(n):
+    if n == 0: return []
     sieve = [True] * (n+1)
     p = 2 #val = 2
     while (p * p <= n):
@@ -15,5 +16,12 @@ def SieveOfEratosthenes(n):
             primes.append(i)
 
     return primes
+
+#driver
+if __name__ == "__main__":
+    print("0: ", SieveOfEratosthenes(0))
+    print("1: ", SieveOfEratosthenes(1))
+    print("2: ", SieveOfEratosthenes(2))
+    print("30: ", SieveOfEratosthenes(30))
 
 
